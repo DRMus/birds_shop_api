@@ -13,5 +13,9 @@ namespace birds_shop_api.Models.BirdsShop
         public string? description { get; set;}
         public int cost { get; set;}
         public string image { get; set; } = null!;
+
+        [NotMapped]
+        public List<OrderProducts>? OrderProducts { get; set; }
+
     }
 }

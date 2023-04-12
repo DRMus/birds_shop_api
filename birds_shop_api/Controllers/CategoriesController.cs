@@ -28,7 +28,9 @@ namespace birds_shop_api.Controllers
           {
               return NotFound();
           }
-            return await _context.categories.ToListAsync();
+            List<Category> categories = await _context.categories.ToListAsync();
+            categories = categories.OrderBy(item => item.category_id).ToList();
+            return categories;
         }
 
         // GET: api/Categories/5

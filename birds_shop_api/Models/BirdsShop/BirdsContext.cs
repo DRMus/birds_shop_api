@@ -8,11 +8,13 @@ namespace birds_shop_api.Models.BirdsShop
         public DbSet<Category> categories { get; set; }
         public DbSet<Product> products { get; set; }
         public DbSet<Order> orders { get; set; }
+        public DbSet<OrderProducts> ordersProducts { get; set; }
 
 
         public BirdsContext(DbContextOptions<BirdsContext> options)
        : base(options)
         {
+
             Database.EnsureCreated();
         }
 
